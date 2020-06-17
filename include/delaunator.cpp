@@ -252,10 +252,10 @@ Delaunator::Delaunator(std::vector<double> const& in_coords)
     double min_y = (std::numeric_limits<double>::max)();
     for (const Point& p : m_points)
     {
-        min_x = std::min(p.x(), min_x);
-        min_y = std::min(p.y(), min_y);
-        max_x = std::max(p.x(), max_x);
-        max_y = std::max(p.y(), max_y);
+        min_x = std::min<double>(p.x(), min_x);
+        min_y = std::min<double>(p.y(), min_y);
+        max_x = std::max<double>(p.x(), max_x);
+        max_y = std::max<double>(p.y(), max_y);
     }
     double width = max_x - min_x;
     double height = max_x - min_y;
